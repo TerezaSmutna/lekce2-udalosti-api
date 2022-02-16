@@ -11,6 +11,17 @@
 
 	<h1>Změna tříd, události</h1>
 
+  <p class="odstavec" onmouseover="ztucni()" onmouseleave="ztenci()">V elipse spi lev</p>
+
+  <button onclick="zcerven()">
+    Cerveny po kliknuti
+  </button>
+
+  <!-- <button class="vetsi" onclick="zvets()">-->
+  <button onclick="zvets()">
+    Vetsi po kliknuti
+  </button> 
+ 
 	<div class="ctverecek zluty"></div>
 
 	<div class="ctverecek zeleny"></div>
@@ -19,7 +30,35 @@
 
 	<button class="tlacitko">Čudlajs</button>
 
+
 	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
-  <script src = "main.js"></script>
+
+  <audio id="zvukovaStopa" src="audio/dingdingdang.mp3" preload="auto"></audio>
+
+  <button class="tlacitko" onclick="startAudio()">
+    Zapni píseň
+  </button>
+
+  <button onclick="pauza()">
+    Pauzni pisen
+  </button>
+
+  <button onclick="potichu()">
+    Hlasitost potichu
+  </button>
+
+  <button onclick="akorat()">
+    Hlasitost akorat
+  </button>
+
+  <button onclick="nahlas()">
+    Hlasitost nahlas
+  </button>
+
+  <button onclick="zacatek()">
+    Vraceni se zacatek
+  </button>
+
+  <script src="main.js"></script>
 </body>
 </html>
