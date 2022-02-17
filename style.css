@@ -34,11 +34,6 @@ h1 {
 	font-size: 36px;
 }
 
-p {
-  font-size: 16px
-  em = desired element pixel value / parent element font-size in pixels
-}
-
 img {
 	margin: 30px 0;
 }

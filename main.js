@@ -8,7 +8,7 @@ let ctverecek = document.querySelector('div.zluty');
 ctverecek.classList.add('ctverecek');
 
 let odstavec = document.querySelector('p');
-odstavec.style.fontSize = '1em'
+odstavec.style.fontSize = '16px'
 
 function ztucni() {
  odstavec.style.fontWeight = "bold";
@@ -23,31 +23,31 @@ function zcerven() {
 }
 
 function zvets() {
-  odstavec.style.fontSize = parseFloat(odstavec.style.fontSize) + 0.625 + "em"
+  odstavec.style.fontSize = parseFloat(odstavec.style.fontSize) + 1 + "px"
   console.log(odstavec.style.fontSize)
 }
+let audioFile = document.getElementById('zvukovaStopa');
 
 function startAudio() {
-  let audioFile = document.getElementById('zvukovaStopa');
   console.log('Zapínám píseň...');
   audioFile.play();
 } 
 function pauzni () {
-  zvukovaStopa.pause();
+  audioFile.pause();
 }
 
 function ztis() {
-  zvukovaStopa.volume = 0;
+  audioFile.volume = 0;
 }
 
 function dejAkorat () {
-  zvukovaStopa.volume = 0.5;
+  audioFile.volume = 0.5;
 }
 
 function dejNahlas() {
-  zvukovaStopa.volume = 1;
+  audioFile.volume = 1;
 }
  
 function dejNaZacatek () {
-  zvukovaStopa.currentTime = 0;
+  audioFile.currentTime = 0;
 }
