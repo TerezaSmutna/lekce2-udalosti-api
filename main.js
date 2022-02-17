@@ -1,13 +1,14 @@
 // tady je místo pro náš program
-console.log ("jsem nalinkovan")
+console.log ("jsem nalinkovan");
 
 let nadpis = document.querySelector('h1');
 nadpis.classList.add('zluty');
 
-let ctverecek = document.querySelector('div.zluty')
+let ctverecek = document.querySelector('div.zluty');
 ctverecek.classList.add('ctverecek');
 
 let odstavec = document.querySelector('p');
+odstavec.style.fontSize = '1em'
 
 function ztucni() {
  odstavec.style.fontWeight = "bold";
@@ -22,36 +23,31 @@ function zcerven() {
 }
 
 function zvets() {
-  //odstavec.classList.add("vetsi");
-  let neco = odstavec.style.fontSize
-  neco = "5px"
-  //odstavec.style.fontSize = "55px"
-  console.log(odstavec.style.fontSize);
-  //odstavec.style.fontSize = "1px"
-  //odstavec.style.fontSize = odstavec.style.fontSize + "1px"
+  odstavec.style.fontSize = parseFloat(odstavec.style.fontSize) + 0.625 + "em"
+  console.log(odstavec.style.fontSize)
 }
 
 function startAudio() {
   let audioFile = document.getElementById('zvukovaStopa');
   console.log('Zapínám píseň...');
   audioFile.play();
-}
-function pauza () {
+} 
+function pauzni () {
   zvukovaStopa.pause();
 }
 
-function potichu() {
+function ztis() {
   zvukovaStopa.volume = 0;
 }
 
-function akorat () {
+function dejAkorat () {
   zvukovaStopa.volume = 0.5;
 }
 
-function nahlas() {
+function dejNahlas() {
   zvukovaStopa.volume = 1;
 }
  
-function zacatek () {
+function dejNaZacatek () {
   zvukovaStopa.currentTime = 0;
 }

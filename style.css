@@ -36,6 +36,7 @@ h1 {
 
 p {
   font-size: 16px
+  em = desired element pixel value / parent element font-size in pixels
 }
 
 img {
@@ -119,7 +120,6 @@ li {
 	border-color: green;
 }
 
-
 .aktivni {
 	background-color: cyan;
 	color: black;
@@ -128,3 +128,5 @@ li {
 .cerveny {
   color: red;
 }
+
+
