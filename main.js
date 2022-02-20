@@ -1,6 +1,3 @@
-// tady je místo pro náš program
-console.log ("jsem nalinkovan");
-
 let nadpis = document.querySelector('h1');
 nadpis.classList.add('zluty');
 
@@ -8,7 +5,7 @@ let ctverecek = document.querySelector('div.zluty');
 ctverecek.classList.add('ctverecek');
 
 let odstavec = document.querySelector('p');
-odstavec.style.fontSize = '16px'
+
 
 function ztucni() {
  odstavec.style.fontWeight = "bold";
@@ -22,10 +19,14 @@ function zcerven() {
   odstavec.classList.toggle('cerveny');
 }
 
+
 function zvets() {
-  odstavec.style.fontSize = parseFloat(odstavec.style.fontSize) + 1 + "px"
-  console.log(odstavec.style.fontSize)
+let computedSize = window.getComputedStyle(odstavec, null);
+computedSize = computedSize.getPropertyValue('font-size');
+odstavec.style.fontSize = (parseInt(computedSize) + 1) + 'px';
 }
+
+
 let audioFile = document.getElementById('zvukovaStopa');
 
 function startAudio() {
@@ -33,6 +34,7 @@ function startAudio() {
   audioFile.play();
 } 
 function pauzni () {
+
   audioFile.pause();
 }
 
